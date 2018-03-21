@@ -14,7 +14,7 @@ public class UsingArrayList {
         String hermInterDia = "SOOO Herm how many item would you like to add";
         System.out.println("Herm's inner voice: "+ hermInterDia);
         int addThisMany = 4;
-        String hermInterRes = "Let's go with "+addThisMany+" items. I want ot add 4 item's. ";
+        String hermInterRes = "Let's go with "+addThisMany+" items. I want to add 4 item's. ";
         System.out.println("Herm's response to himself:"+ hermInterRes);
 
 
@@ -23,7 +23,7 @@ public class UsingArrayList {
         addItemsToPlate(initialNumOnPlate,plate);
         printPlateStatus(plate);
         //2. Herman doesn’t like everything that was put there, so he removes the 3rd item added. (use
-//        remove)
+        //remove)
         System.out.println("Herm removed " + plate.get(2) + " from his plate.");
         plate.remove(2);//ArrayList start at zero
         printPlateStatus(plate);
@@ -53,20 +53,20 @@ public class UsingArrayList {
         System.out.println(" Because he's quirky, Herm adds a " + addItemToFront + " to the front of his plate.");
         plate.add(0, addItemToFront);
         printPlateStatus(plate);
-//        6. Herman’s mom then asks where his salad is located. (use the indexOf method to determine
-//        what spot on Herman’s plate the salad is – it should be in the first spot)
+    //6) Herman’s mom then asks where his salad is located. (use the indexOf method to determine
+    //   what spot on Herman’s plate the salad is – it should be in the first spot)
         String anotherBigMomQ  = "Mom: The grape vine told me that you added "+ addItemToFront + "to your plate.\n Where did you add it? ";
         System.out.println(anotherBigMomQ);
-        int posSalad = plate.indexOf(addItemToFront);
         String resToQaboutSalad = "Have a gander at my entire plate. \n" + plate.toString();
         System.out.println("Herm:"+ resToQaboutSalad);
-//      7)  Munch, munch. Herman eats his food. Go through Herman’s plate and munch all his food by
-//        using the clear method.
+    //7)  Munch, munch. Herman eats his food. Go through Herman’s plate and munch all his food by
+    //    using the clear method.
         String eatItAll = "  Yumm. Chew. Scarf. Yumm!!!";
         for(String item:  plate ){
             System.out.println(item + eatItAll);
         }
         System.out.println("Herm ate all of the food on his plate");
+        plate.clear();
         printPlateStatus(plate);
 
     }
